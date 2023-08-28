@@ -1,14 +1,3 @@
-# python_markdown
-
-This are my settings/extensions for the markdown command to generate a proper html file:
-
-``` py 
-html = markdown.markdown(text, extensions=[
-						 'fenced_code', 'toc', 'codehilite', 'meta', 'tables'], output_format="html5")
-```
-
-
-# Example:
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>

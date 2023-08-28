@@ -1,0 +1,87 @@
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+
+<div class="toc">
+<ul>
+<li><a href="#markdown-test">Markdown Test</a><ul>
+<li><a href="#listing-test">Listing Test</a></li>
+<li><a href="#image-test">Image Test</a><ul>
+<li><a href="#link-in-markdown">Link in Markdown</a></li>
+<li><a href="#link-in-html">Link in HTML</a></li>
+</ul>
+</li>
+<li><a href="#table-test">Table Test</a><ul>
+<li><a href="#markdown">Markdown</a></li>
+<li><a href="#html">HTML</a></li>
+</ul>
+</li>
+<li><a href="#lists">Lists</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="markdown-test">Markdown Test</h1>
+<p>This is a markown test, to check if the python markdown html conversiont works correctly</p>
+<h2 id="listing-test">Listing Test</h2>
+<pre class="codehilite"><code class="language-python">def convert_markdown_2_html(inputfile):
+    with open(inputfile, 'r') as f:
+        text = f.read()
+        html = markdown.markdown(text, extensions=[FencedCodeExtension()])
+
+    temp = inputfile.strip('.')
+    outputfile = temp[0] + '.html'
+
+    with open(outputfile, 'w') as f:
+        f.write(html)
+</code></pre>
+
+<h2 id="image-test">Image Test</h2>
+<h3 id="link-in-markdown">Link in Markdown</h3>
+<p><img alt="test_image" src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/47T98WdiWvPzKEVDFhPqtUKv"></p>
+<h3 id="link-in-html">Link in HTML</h3>
+<p><img src ="https://community-cdn-digitalocean-com.global.ssl.fastly.net/47T98WdiWvPzKEVDFhPqtUKv" alt = "test_image" width="300px"></p>
+<h2 id="table-test">Table Test</h2>
+<h3 id="markdown">Markdown</h3>
+<table>
+<thead>
+<tr>
+<th>Cell1</th>
+<th>Cell2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="html">HTML</h3>
+<table>
+    <tr>
+        <td>
+            Cell1
+        </td>
+        <td>
+            Cell2
+        </td>
+    </tr>
+</table>
+
+<h2 id="lists">Lists</h2>
+<p>Ordered List</p>
+<ol>
+<li>one</li>
+<li>two</li>
+<li>test</li>
+<li>three</li>
+</ol>
+<p>unordered List</p>
+<ul>
+<li>asdf</li>
+<li>aff</li>
+<li>ad</li>
+<li>e</li>
+<li>adsdf</li>
+</ul>
