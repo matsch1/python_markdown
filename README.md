@@ -9,11 +9,6 @@ html = markdown.markdown(text, extensions=['fenced_code', 'toc',
 
 
 # Example:
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-
 ## Table Of Contents (does not work in Github)
 [TOC]
 
@@ -33,6 +28,12 @@ def convert_markdown_2_html(inputfile):
     with open(outputfile, 'w') as f:
         f.write(html)
 ```
+The code highlighting needs this styling: I put it in the beginning of my markdown:
+``` html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+```
 
 ## Image Test
 ### Link in Markdown
@@ -42,8 +43,9 @@ def convert_markdown_2_html(inputfile):
 
 ## Table Test
 ### Markdown
+
 | Cell1  | Cell2  |
-|---|---|
+| ---  | ---  |
 
 
 ### HTML
