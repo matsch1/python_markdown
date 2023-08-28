@@ -3,8 +3,8 @@
 This are my settings/extensions for the markdown command to generate a proper html file:
 
 ``` py 
-html = markdown.markdown(text, extensions=[
-						 'fenced_code', 'toc', 'codehilite', 'meta', 'tables'], output_format="html5")
+html = markdown.markdown(text, extensions=['fenced_code', 'toc',
+			'codehilite', 'meta', 'tables'], output_format="html5")
 ```
 
 
@@ -14,7 +14,7 @@ html = markdown.markdown(text, extensions=[
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 
-
+## Table Of Contents (does not work in Github)
 [TOC]
 
 # Markdown Test
@@ -36,9 +36,9 @@ def convert_markdown_2_html(inputfile):
 
 ## Image Test
 ### Link in Markdown
-![test_image](https://community-cdn-digitalocean-com.global.ssl.fastly.net/47T98WdiWvPzKEVDFhPqtUKv)
+![test_image](https://static.vecteezy.com/system/resources/previews/019/767/928/non_2x/batman-logo-batman-logo-transparent-free-png.png)
 ### Link in HTML
-<img src ="https://community-cdn-digitalocean-com.global.ssl.fastly.net/47T98WdiWvPzKEVDFhPqtUKv" alt = "test_image" width="300px">
+<img src ="https://static.vecteezy.com/system/resources/previews/019/767/928/non_2x/batman-logo-batman-logo-transparent-free-png.png" alt = "test_image" width="300px">
 
 ## Table Test
 ### Markdown
